@@ -4,6 +4,6 @@ def inc(x):
 def test_answer():
   assert inc(3) == 4
 
-def res = inc(2)
+res = inc(2)
 
 print("The increment of 2 is {}".format(res))
