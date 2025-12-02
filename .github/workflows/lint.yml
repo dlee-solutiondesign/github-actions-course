@@ -2,9 +2,9 @@
 name: lint
 on:
   push:
-    branches: null
+    branches: none
   pull_request:
-    branches: null
+    branches: none
   workflow_dispatch:
 
 jobs:
