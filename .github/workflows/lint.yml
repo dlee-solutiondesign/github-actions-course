@@ -3,7 +3,7 @@ name: lint
 on:
   push:
     branches: null
-  pull:
+  pull-request:
     branches: null
   workflow_dispatch:
 
