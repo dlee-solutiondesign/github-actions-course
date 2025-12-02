@@ -3,6 +3,9 @@ def inc(x):
 
 def test_answer():
   assert inc(3) == 4
+  
+def test_other_inc():
+  assert inc(7) == 8
 
 res = inc(2)
 
