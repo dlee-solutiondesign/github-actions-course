@@ -1,0 +1,29 @@
+
+name: lint
+on:
+  push:
+    branches: none
+  pull_request:
+    branches: none
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: lint
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: read
+      statuses: write
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: super-linter
+        uses: super-linter/super-linter@v8.3.0 # x-release-please-version
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
